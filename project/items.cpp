@@ -14,6 +14,7 @@ int potion::healing()
 {
 	return 25; // دي علشان لما الشخصية تستدعاها تزودلها الهيلث بمقدار 25
 }
+
 int potion::size()
 {
 	return -10; // دي بقي علشان لما نستدعي الفانكشن دي في الانفينتوري تنقص 10 من مساحتها
@@ -36,7 +37,7 @@ int poison::size()
 	return -10; // ودي لما الانفينتوري تستدعاها هتنقص من مساحتها -10
 }
 
-shield::shield()
+shield::shield():health(50)
 {
 }
 
@@ -58,7 +59,7 @@ int shield::size()
 	return -30; // ده المساحة الي هستهلكها لما الانفينتوري تستدعاها -30
 }
 
-weapon::weapon()
+weapon::weapon():health(100)
 {
 }
 
