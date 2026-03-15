@@ -27,4 +27,41 @@ protected:
 
 };
 
+class  warrior: public charecter
+{
+public:
+	 warrior();
+	~ warrior();
+	int special_attack();
+
+private:
+
+};
+
+class mage:public charecter
+{
+public:
+	mage();
+	~mage();
+	int special_attack();
+
+private:
+
+};
+
+class archer:public charecter
+{
+public:
+	archer();
+	~archer();
+	int special_attack();
+	
+
+private:
+
+};
+
+
+
+
 

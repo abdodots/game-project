@@ -53,3 +53,78 @@ void charecter::set_sp_po(int x)
 	}
 }
 
+warrior::warrior():charecter()
+{
+	name = "Warrior";
+}
+
+warrior::~warrior()
+{
+}
+
+// السبيشيال اتتاك بتاعت المحارب انه بيرجع دامع بمقدار -70 للعدو الي قدامه
+// وهيزود الاستامينا بمقدار 50
+
+int warrior::special_attack()
+{
+	if (special_power == 100)
+	{
+		return -70;
+		stamina += 50;
+	}
+	else
+	{
+		cout << "You Don`t Have Enogh Special Power points!" << endl;
+	}
+}
+
+mage::mage():charecter()
+{
+	name = "Mage";
+}
+
+mage::~mage()
+{
+}
+
+// دي بقي هتسحب من العدو 50 من الاسبيشيال باور بتاعته وهتزودهم عندها 
+// وهتزود الهيلث بتاعها بمقدار 50
+
+int mage::special_attack()
+{
+	if (special_power == 100)
+	{
+		health += 50;
+		return -50;
+
+	}
+	else
+	{
+		cout << "You Don`t Have Enogh Special Power points!" << endl;
+	}
+}
+
+archer::archer():charecter()
+{
+	name = "Archer";
+}
+
+archer::~archer()
+{
+}
+
+// ده هيرجع الستامينا بتاعته 100 تاني والهيلث برضو 100
+
+int archer::special_attack()
+{
+	if (special_power == 100)
+	{
+		stamina = 100;
+		health = 100;
+	}
+	else
+	{
+		cout << "You Don`t Have Enogh Special Power points!" << endl;
+	}
+}
+
