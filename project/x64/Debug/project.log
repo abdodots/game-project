@@ -4,7 +4,8 @@
   project.cpp
   system.cpp
   Generating Code...
-C:\Users\Abdelrhman\OneDrive\Desktop\project\project\charecter.cpp(79,1): warning C4715: 'warrior::special_attack': not all control paths return a value
-C:\Users\Abdelrhman\OneDrive\Desktop\project\project\charecter.cpp(105,1): warning C4715: 'mage::special_attack': not all control paths return a value
-C:\Users\Abdelrhman\OneDrive\Desktop\project\project\charecter.cpp(130,1): warning C4715: 'archer::special_attack': not all control paths return a value
-  project.vcxproj -> C:\Users\Abdelrhman\OneDrive\Desktop\project\x64\Debug\project.exe
+D:\New folder\project\charecter.cpp(105,1): warning C4715: 'mage::special_attack': not all control paths return a value
+D:\New folder\project\charecter.cpp(130,1): warning C4715: 'archer::special_attack': not all control paths return a value
+D:\New folder\project\charecter.cpp(79,1): warning C4715: 'warrior::special_attack': not all control paths return a value
+  LINK : D:\New folder\x64\Debug\project.exe not found or not built by the last incremental link; performing full link
+  project.vcxproj -> D:\New folder\x64\Debug\project.exe
