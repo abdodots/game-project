@@ -34,7 +34,7 @@ int poison::damage()
 }
 int poison::size()
 {
-	return -10; // ودي لما الانفينتوري تستدعاها هتنقص من مساحتها -10
+	return -15; // ودي لما الانفينتوري تستدعاها هتنقص من مساحتها -15
 }
 
 shield::shield():health(50)

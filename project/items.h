@@ -45,7 +45,7 @@ public:
 	int size();
 
 private:
-	int health = 50;
+	int health;
 
 };
 
@@ -59,7 +59,7 @@ public:
 	int size();
 
 private:
-	int health = 100;
+	int health ;
 
 };
 
