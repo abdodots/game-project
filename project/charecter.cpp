@@ -121,6 +121,7 @@ int archer::special_attack()
 	{
 		stamina = 100;
 		health = 100;
+		return 0;
 	}
 	else
 	{

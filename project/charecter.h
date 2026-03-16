@@ -1,5 +1,7 @@
 #pragma once
 #include <iostream>
+#include "inv.h"
+#include "items.h"
 
 using namespace std;
 

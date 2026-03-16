@@ -1,3 +1,6 @@
+#ifndef PROJECT_ITEMS_H
+#define PROJECT_ITEMS_H
+
 #include <iostream>
 using namespace std;
 
@@ -62,5 +65,10 @@ private:
 	int health ;
 
 };
+
+
+
+#endif // PROJECT_ITEMS_H
+
 
 
