@@ -129,3 +129,27 @@ int archer::special_attack()
 	}
 }
 
+int charecter::get_sp_po()
+{
+	return special_power;
+}
+
+int charecter::get_health()
+{
+	return health;
+}
+
+int charecter::get_defence()
+{
+	return defence;
+}
+
+int charecter::get_stamina()
+{
+	return stamina;
+}
+
+void charecter::set_health(int x)
+{
+	health += x;
+}

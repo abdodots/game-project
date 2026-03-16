@@ -27,7 +27,7 @@
     <ClCompile Include="charecter.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="system.cpp">
+    <ClCompile Include="GameSystem.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -41,7 +41,7 @@
     <ClInclude Include="charecter.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="system.h">
+    <ClInclude Include="GameSystem.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

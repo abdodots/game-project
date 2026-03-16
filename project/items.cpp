@@ -89,3 +89,8 @@ int weapon::size()
 {
 	return -40; // دي المساحة الي هينقصها من الانفينتوري -40
 }
+
+int weapon::get_health()
+{
+	return health;
+}

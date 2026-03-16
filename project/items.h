@@ -60,6 +60,7 @@ public:
 	int heavy_attack();
 	int melee_attack();
 	int size();
+	int get_health();
 
 private:
 	int health ;

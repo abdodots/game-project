@@ -16,6 +16,11 @@ public:
 	void set_sp_po(int x); // ودي بقي الي هتاخد قيمة الدامج الي بعمله للعدو وتزوده علي الاسبيشيال باور
 	virtual int special_attack() = 0; // ودي بقي الفانكشن الي الكاركترز التانيين لما يورثوها تكتبها علي حسب الشخصية 
 	void set_shield(int x);
+	int get_sp_po();
+	int get_health();
+	int get_stamina();
+	int get_defence();
+	void set_health(int x);
 
 private:
 

@@ -51,7 +51,7 @@ void inventory::add_item(int item_size)
   }
   else
   {
-    cout << "Can`t add this item!" << endl;
+    cout << "Don`t Have Enogh Space!" << endl;
   }
 }
 
@@ -86,3 +86,41 @@ void inventory::get_items()
     cout << "your shields number : " << z << endl;
     cout << "your weapons number : " << a << endl;
 }
+
+int inventory::get_size()
+{
+    return inv_size;
+}
+int inventory::get_x()
+{
+    return x;
+}
+int inventory::get_y()
+{
+    return y;
+}
+int inventory::get_z()
+{
+    return z;
+}
+int inventory::get_a()
+{
+    return a;
+}
+void inventory::set_x()
+{
+    x--;
+}
+void inventory::set_y()
+{
+    y--;
+}
+void inventory::set_z()
+{
+    z--;
+}
+void inventory::set_a()
+{
+    a--;
+}
+
