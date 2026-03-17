@@ -14,8 +14,8 @@ public:
 	void select_items();
 	void round1();
 	void round2();
-	void take_turns();
-	bool is_alive();
+	bool is_alivep1();
+	bool is_alivep2();
 
 private:
 	charecter* player1;

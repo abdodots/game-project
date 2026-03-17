@@ -21,6 +21,8 @@ public:
 	int get_stamina();
 	int get_defence();
 	void set_health(int x);
+	void set_defence();
+	void set_stamina(int x);
 
 private:
 

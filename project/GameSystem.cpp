@@ -94,6 +94,7 @@ void GameSystem::select_items()
 		else if (x == 3)
 		{
 			x = -30;
+			player1->set_defence();
 		}
 		else if (x == 4)
 		{
@@ -124,6 +125,7 @@ void GameSystem::select_items()
 		else if (y == 3)
 		{
 			y = -30;
+			player2->set_defence();
 		}
 		else if (y == 4)
 		{
@@ -150,10 +152,10 @@ void GameSystem::select_items()
 
 void GameSystem::round1()
 {
-	cout << "===========Player 1 Status============\n";
+	cout << "\n===========Player 1 Status============\n";
 	cout << "Health: " << player1->get_health() << " Defence: " << player1->get_defence() << " Stamina: " << player1->get_stamina() << " Special Power: " << player1->get_sp_po() << endl;
 	cout << "=======================================\n";
-	cout << "1- Basic Attack\n2- Inventory\n" << endl;
+	cout << "1- Basic Attack\n2- Inventory\n";
 	if (player1->get_sp_po() == 100)
 	{
 		cout << "3- Special Power"<<endl;
@@ -183,7 +185,7 @@ void GameSystem::round1()
 	}
 	else if (x == 2)
 	{
-		cout << "===========Player 1 Inventory============\n";
+		cout << "\n===========Player 1 Inventory============\n";
 		cout << "1- Potion: " << inv_player1.get_x() << endl;
 		cout << "2- Poison: " << inv_player1.get_y() << endl;
 		cout << "3- Weapon: " << inv_player1.get_a() << endl;
@@ -196,11 +198,11 @@ void GameSystem::round1()
 			{
 				break;
 			}
-			else if (y == 2 && inv_player1.get_y())
+			else if (y == 2 && inv_player1.get_y() >= 1)
 			{
 				break;
 			}
-			else if (y == 3 && inv_player1.get_a())
+			else if (y == 3 && inv_player1.get_a() >= 1)
 			{
 				break;
 			}
@@ -224,16 +226,16 @@ void GameSystem::round1()
 		}
 		else if (y == 3 && inv_player1.get_a() >= 1)
 		{
-			cout << "========================\n";
+			cout << "\n========================\n";
 			cout << "1- Heavy Attack\n2-Melee Attack\n";
 			cout << "========================\n";
 			int z;
 			while (true) {
 				cin >> z;
-				if (z == 1 && player1->get_stamina() >= 30) {
+				if (z == 1 && player1->get_stamina() >= 70) {
 					break;
 				}
-				else if (z == 2 && player1->get_stamina() >= 15)
+				else if (z == 2 && player1->get_stamina() >= 40)
 				{
 					break;
 				}
@@ -243,20 +245,24 @@ void GameSystem::round1()
 					break;
 				}
 			}
-			if (z == 1 && player1->get_stamina() >= 30) {
+			if (z == 1 && player1->get_stamina() >= 70) {
 				player2->take_damage(wea_player1.heavy_attack());
+				player1->set_stamina(-50);
 				player1->set_stamina();
 				if (wea_player1.get_health() <= 0) {
 					inv_player1.set_a();
 				}
+				player1->set_sp_po(50);
 			}
-			else if (z == 2 && player1->get_stamina() >= 15)
+			else if (z == 2 && player1->get_stamina() >= 40)
 			{
 				player2->take_damage(wea_player1.melee_attack());
+				player1->set_stamina(-30);
 				player1->set_stamina();
 				if (wea_player1.get_health() <= 0) {
 					inv_player1.set_a();
 				}
+				player1->set_sp_po(25);
 			}
 		}
 
@@ -264,24 +270,33 @@ void GameSystem::round1()
 	else if (x == 3)
 	{
 		player2->take_damage(player1->special_attack());
+		player1->set_sp_po(-100);
 	}
 }
 
 void GameSystem::round2()
 {
-	cout << "===========Player 2 Status============\n";
+	srand(time(0));
+	cout << "\n===========Player 2 Status============\n";
 	cout << "Health: " << player2->get_health() << " Defence: " << player2->get_defence() << " Stamina: " << player2->get_stamina() << " Special Power: " << player2->get_sp_po() << endl;
 	cout << "=======================================\n";
-	cout << "1- Basic Attack\n2- Inventory\n" << endl;
+	cout << "1- Basic Attack\n2- Inventory\n" ;
 	if (player2->get_sp_po() == 100)
 	{
 		cout << "3- Special Power" << endl;
 	}
 	cout << "=======================================\n";
-	cout << "Choose: ";
+	
 	int x;
+	int arx[2] = { 1,2 };
+	if (player2->get_sp_po() < 100) {
+		x = arx[rand() % 2];
+	}
+	else
+	{
+		x = 3;
+	}
 	while (true) {
-		cin >> x;
 		if (x == 1 || x == 2) {
 			break;
 		}
@@ -302,30 +317,31 @@ void GameSystem::round2()
 	}
 	else if (x == 2)
 	{
-		cout << "===========Player 1 Inventory============\n";
+		cout << "\n===========Player 2 Inventory============\n";
 		cout << "1- Potion: " << inv_player2.get_x() << endl;
 		cout << "2- Poison: " << inv_player2.get_y() << endl;
 		cout << "3- Weapon: " << inv_player2.get_a() << endl;
 		cout << "=========================================\n";
 		cout << "Choose: ";
 		int y;
+		int ary[3] = { 1,2,3 };
 		while (true) {
-			cin >> y;
+			y = ary[rand() % 3];
 			if (y == 1 && inv_player2.get_x() >= 1)
 			{
 				break;
 			}
-			else if (y == 2 && inv_player2.get_y())
+			else if (y == 2 && inv_player2.get_y() >= 1)
 			{
 				break;
 			}
-			else if (y == 3 && inv_player2.get_a())
+			else if (y == 3 && inv_player2.get_a() >= 1)
 			{
 				break;
 			}
 			else
 			{
-				cout << "Please Choose A Choise From Up There :( ";
+				continue;
 			}
 		}
 		if (y == 1 && inv_player2.get_x() >= 1)
@@ -343,16 +359,17 @@ void GameSystem::round2()
 		}
 		else if (y == 3 && inv_player2.get_a() >= 1)
 		{
-			cout << "========================\n";
+			cout << "\n========================\n";
 			cout << "1- Heavy Attack\n2-Melee Attack\n";
 			cout << "========================\n";
 			int z;
+			int arz[2] = { 1,2 };
 			while (true) {
-				cin >> z;
-				if (z == 1 && player2->get_stamina() >= 30) {
+				z = arz[rand() % 2];
+				if (z == 1 && player2->get_stamina() >= 70) {
 					break;
 				}
-				else if (z == 2 && player2->get_stamina() >= 15)
+				else if (z == 2 && player2->get_stamina() >= 40)
 				{
 					break;
 				}
@@ -362,20 +379,24 @@ void GameSystem::round2()
 					break;
 				}
 			}
-			if (z == 1 && player2->get_stamina() >= 30) {
+			if (z == 1 && player2->get_stamina() >= 70) {
 				player1->take_damage(wea_player2.heavy_attack());
+				player2->set_stamina(-50);
 				player2->set_stamina();
 				if (wea_player2.get_health() <= 0) {
 					inv_player2.set_a();
 				}
+				player2->set_sp_po(50);
 			}
-			else if (z == 2 && player2->get_stamina() >= 15)
+			else if (z == 2 && player2->get_stamina() >= 40)
 			{
 				player1->take_damage(wea_player2.melee_attack());
+				player2->set_stamina(-30);
 				player2->set_stamina();
 				if (wea_player2.get_health() <= 0) {
 					inv_player2.set_a();
 				}
+				player2->set_sp_po(25);
 			}
 		}
 
@@ -383,5 +404,30 @@ void GameSystem::round2()
 	else if (x == 3)
 	{
 		player1->take_damage(player2->special_attack());
+		player2->set_sp_po(-100);
+	}
+}
+
+bool GameSystem::is_alivep1()
+{
+	if (player1->get_health() <= 0)
+	{
+		return true;
+	}
+	else
+	{
+		return false;
+	}
+}
+
+bool GameSystem::is_alivep2()
+{
+	if (player2->get_health() <= 0)
+	{
+		return true;
+	}
+	else
+	{
+		return false;
 	}
 }
