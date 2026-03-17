@@ -1,0 +1,8 @@
+https://drive.google.com/file/d/1tjRg6y7odJwVGDFWppwo4_5t0bmZsAwL/view?usp=sharing
+ -> inventory uml
+
+https://drive.google.com/file/d/17Uuiqxh0Q5PGhQj_-DzMF8XW8qoRidad/view?usp=sharing
+ -> system uml
+
+https://drive.google.com/file/d/1r2EZCZjkdMedBhUGT_5DusPrdaOhSesK/view?usp=sharing
+ -> character uml
