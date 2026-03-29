@@ -17,16 +17,16 @@ int main()
 		if (G1.is_alivep2())
 		{
 			cout << "\n====================\n";
-			cout << "Player One wins :) \n";
-			cout << "====================\n";
+			cout << " You Won :) ";
+			cout << "\n====================\n";
 			break;
 		}
 		G1.round2();
 		if (G1.is_alivep1())
 		{
 			cout << "\n====================\n";
-			cout << "Computer wins :( \n";
-			cout << "====================\n";
+			cout << " Hhhhh....Noooop :} ";
+			cout << "\n====================\n";
 			break;
 		}
 	}

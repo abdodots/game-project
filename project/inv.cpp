@@ -6,10 +6,10 @@ using namespace std;
 inventory::inventory()
 {
   inv_size = 100; // المساحة الأساسية للانفينتوري
-  x = 0; // عدد البوشن في الانفينتوري
-  y = 0; // عدد البويسين في الانفينتوري
-  z = 0; // عدد الشيلد الي في الانفينتوري
-  a = 0; // عدد الويبون الي في الانفينتوري
+  pos_num = 0; // عدد البوشن في الانفينتوري
+  poi_num = 0; // عدد البويسين في الانفينتوري
+  shi_num = 0; // عدد الشيلد الي في الانفينتوري
+  wea_num = 0; // عدد الويبون الي في الانفينتوري
 }
 
 // الفانكشن دي الي هتشيك ينفع نضيف عنصر ولا لا
@@ -30,22 +30,20 @@ void inventory::add_item(int item_size)
   {
     inv_size += item_size;
 
-    // هنا علشان نشوف هو اختار ايه ونزوده
-
     if (item_size == -10) 
     {
-        x++; 
+        pos_num++;
     }
     else if (item_size == -15)
     {
-        y++;
+        poi_num++;
     }
     else if (item_size == -30) {
-        z++;
+        shi_num++;
     }
     else if (item_size == -40)
     {
-        a++;
+        wea_num++;
     }
     cout << "Item added. Inventory size: " << inv_size << endl;
   }
@@ -53,6 +51,30 @@ void inventory::add_item(int item_size)
   {
     cout << "Don`t Have Enogh Space!" << endl;
   }
+}
+
+void inventory::add_item_pl2(int item_size)
+{
+    if (check(item_size))
+    {
+        inv_size += item_size;
+
+        if (item_size == -10)
+        {
+            pos_num++;
+        }
+        else if (item_size == -15)
+        {
+            poi_num++;
+        }
+        else if (item_size == -30) {
+            shi_num++;
+        }
+        else if (item_size == -40)
+        {
+            wea_num++;
+        }
+    }
 }
 
 void inventory::delet_item(int item_size)
@@ -63,64 +85,64 @@ void inventory::delet_item(int item_size)
 
   if (item_size == -10)
   {
-      x--;
+      pos_num--;
   }
   else if (item_size == -15)
   {
-      y--;
+      poi_num--;
   }
   else if (item_size == -30) {
-      z--;
+      shi_num--;
   }
   else if (item_size == -40)
   {
-      a--;
+      wea_num--;
   }
   cout << "Item deleted. Inventory size: " << inv_size << endl;
 }
 
 void inventory::get_items()
 {
-    cout << "your potions number : " << x << endl;
-    cout << "your poisons number : " << y << endl;
-    cout << "your shields number : " << z << endl;
-    cout << "your weapons number : " << a << endl;
+    cout << "your potions number : " << pos_num << endl;
+    cout << "your poisons number : " << poi_num << endl;
+    cout << "your shields number : " << shi_num << endl;
+    cout << "your weapons number : " << wea_num << endl;
 }
 
 int inventory::get_size()
 {
     return inv_size;
 }
-int inventory::get_x()
+int inventory::get_pos_num()
 {
-    return x;
+    return pos_num;
 }
-int inventory::get_y()
+int inventory::get_poi_num()
 {
-    return y;
+    return poi_num;
 }
-int inventory::get_z()
+int inventory::get_shi_num()
 {
-    return z;
+    return shi_num;
 }
-int inventory::get_a()
+int inventory::get_wea_num()
 {
-    return a;
+    return wea_num;
 }
-void inventory::set_x()
+void inventory::set_pos_num()
 {
-    x--;
+    pos_num--;
 }
-void inventory::set_y()
+void inventory::set_poi_num()
 {
-    y--;
+    poi_num--;
 }
-void inventory::set_z()
+void inventory::set_shi_num()
 {
-    z--;
+    shi_num--;
 }
-void inventory::set_a()
+void inventory::set_wea_num()
 {
-    a--;
+    wea_num--;
 }
 

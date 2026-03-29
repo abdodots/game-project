@@ -61,6 +61,7 @@ public:
 	int melee_attack();
 	int size();
 	int get_health();
+	void set_health();
 
 private:
 	int health ;

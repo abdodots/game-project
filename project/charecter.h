@@ -10,7 +10,7 @@ class  charecter
 public:
 	 charecter();
 	~ charecter();
-	int basic_attack(); // دي هتبقي اكنه بيضرب بايده وهتعمل دامج -5 
+	int basic_attack();  
 	void take_damage(int x); // دي بقي هتاخد قيمة الدامج وتشوف تنقصه من الدرع ولا من الدم 
 	void set_stamina(); // دي هتزود قيمة الستامينا 5 بعد كل راوند
 	void set_sp_po(int x); // ودي بقي الي هتاخد قيمة الدامج الي بعمله للعدو وتزوده علي الاسبيشيال باور
@@ -35,6 +35,7 @@ protected:
 
 
 };
+
 
 class  warrior: public charecter
 {

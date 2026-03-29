@@ -94,3 +94,8 @@ int weapon::get_health()
 {
 	return health;
 }
+
+void weapon::set_health()
+{
+	health = 100;
+}

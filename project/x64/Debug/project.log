@@ -1,7 +1,5 @@
 ﻿  GameSystem.cpp
 C:\Users\Abdelrhman\OneDrive\Desktop\project\project\GameSystem.cpp(48,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-C:\Users\Abdelrhman\OneDrive\Desktop\project\project\GameSystem.cpp(113,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-C:\Users\Abdelrhman\OneDrive\Desktop\project\project\GameSystem.cpp(279,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
-  project.cpp
-  Generating Code...
+C:\Users\Abdelrhman\OneDrive\Desktop\project\project\GameSystem.cpp(115,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\Users\Abdelrhman\OneDrive\Desktop\project\project\GameSystem.cpp(304,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
   project.vcxproj -> C:\Users\Abdelrhman\OneDrive\Desktop\project\x64\Debug\project.exe

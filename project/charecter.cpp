@@ -15,7 +15,7 @@ charecter::~charecter()
 int charecter::basic_attack()
 {
 	stamina -= 5;
-	return -5;
+	return -10;
 }
 
 void charecter::take_damage(int x)
@@ -81,6 +81,7 @@ int warrior::special_attack()
 	else
 	{
 		cout << "You Don`t Have Enogh Special Power points!" << endl;
+
 	}
 }
 
