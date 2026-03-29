@@ -5,14 +5,13 @@ using namespace std;
 
 inventory::inventory()
 {
-  inv_size = 100; // المساحة الأساسية للانفينتوري
-  pos_num = 0; // عدد البوشن في الانفينتوري
-  poi_num = 0; // عدد البويسين في الانفينتوري
-  shi_num = 0; // عدد الشيلد الي في الانفينتوري
-  wea_num = 0; // عدد الويبون الي في الانفينتوري
+  inv_size = 100; 
+  pos_num = 0; 
+  poi_num = 0; 
+  shi_num = 0; 
+  wea_num = 0; 
 }
 
-// الفانكشن دي الي هتشيك ينفع نضيف عنصر ولا لا
 
 bool inventory::check(int item_size)
 {
@@ -22,7 +21,6 @@ bool inventory::check(int item_size)
     return false;
 }
 
-// الفانكشن دي هتضيف العنصر للانفينتوري
 
 void inventory::add_item(int item_size)
 {
@@ -81,7 +79,6 @@ void inventory::delet_item(int item_size)
 {
   inv_size -= item_size;
 
-  // هنا علشان نشوف هو استعمل ايه ونمسحه
 
   if (item_size == -10)
   {

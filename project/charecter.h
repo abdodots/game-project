@@ -11,10 +11,10 @@ public:
 	 charecter();
 	~ charecter();
 	int basic_attack();  
-	void take_damage(int x); // دي بقي هتاخد قيمة الدامج وتشوف تنقصه من الدرع ولا من الدم 
-	void set_stamina(); // دي هتزود قيمة الستامينا 5 بعد كل راوند
-	void set_sp_po(int x); // ودي بقي الي هتاخد قيمة الدامج الي بعمله للعدو وتزوده علي الاسبيشيال باور
-	virtual int special_attack() = 0; // ودي بقي الفانكشن الي الكاركترز التانيين لما يورثوها تكتبها علي حسب الشخصية 
+	void take_damage(int x);  
+	void set_stamina(); 
+	void set_sp_po(int x); 
+	virtual int special_attack() = 0; 
 	void set_shield(int x);
 	int get_sp_po();
 	int get_health();
@@ -27,7 +27,7 @@ public:
 private:
 
 protected:
-	string name; // دي انا مش ادتها قيمة ابتدائية علشان كل شخصية تكتب القيمة الابتدائية بتاعتها علي حسب اسمها
+	string name; 
 	int health;
 	int defence;
 	int stamina;
