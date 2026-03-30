@@ -25,7 +25,7 @@ int main()
 		if (G1.is_alivep1())
 		{
 			cout << "\n====================\n";
-			cout << " Hhhhh....Noooop :} ";
+			cout << " computer win :} ";
 			cout << "\n====================\n";
 			break;
 		}

@@ -79,11 +79,11 @@ int weapon::melee_attack()
 	return -25; 
 }
 
-// ده الي بيحدد مساحة السلام في الانفينتوري
+
 
 int weapon::size()
 {
-	return -40; // دي المساحة الي هينقصها من الانفينتوري -40
+	return -40; 
 }
 
 int weapon::get_health()

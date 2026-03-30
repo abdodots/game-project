@@ -6,10 +6,10 @@ using namespace std;
 inventory::inventory()
 {
   inv_size = 100; 
-  pos_num = 0; 
-  poi_num = 0; 
-  shi_num = 0; 
-  wea_num = 0; 
+  pos_number = 0; 
+  poi_number = 0; 
+  shi_number = 0; 
+  wea_number = 0; 
 }
 
 
@@ -30,18 +30,18 @@ void inventory::add_item(int item_size)
 
     if (item_size == -10) 
     {
-        pos_num++;
+        pos_number++;
     }
     else if (item_size == -15)
     {
-        poi_num++;
+        poi_number++;
     }
     else if (item_size == -30) {
-        shi_num++;
+        shie_number++;
     }
     else if (item_size == -40)
     {
-        wea_num++;
+        wea_number++;
     }
     cout << "Item added. Inventory size: " << inv_size << endl;
   }
@@ -51,7 +51,7 @@ void inventory::add_item(int item_size)
   }
 }
 
-void inventory::add_item_pl2(int item_size)
+void inventory::add_item_plyer2(int item_size)
 {
     if (check(item_size))
     {
@@ -59,18 +59,18 @@ void inventory::add_item_pl2(int item_size)
 
         if (item_size == -10)
         {
-            pos_num++;
+            pos_number++;
         }
         else if (item_size == -15)
         {
-            poi_num++;
+            poi_number++;
         }
         else if (item_size == -30) {
-            shi_num++;
+            shie_number++;
         }
         else if (item_size == -40)
         {
-            wea_num++;
+            wea_number++;
         }
     }
 }
@@ -82,64 +82,64 @@ void inventory::delet_item(int item_size)
 
   if (item_size == -10)
   {
-      pos_num--;
+      pos_number--;
   }
   else if (item_size == -15)
   {
-      poi_num--;
+      poi_number--;
   }
   else if (item_size == -30) {
-      shi_num--;
+      shie_number--;
   }
   else if (item_size == -40)
   {
-      wea_num--;
+      wea_number--;
   }
   cout << "Item deleted. Inventory size: " << inv_size << endl;
 }
 
 void inventory::get_items()
 {
-    cout << "your potions number : " << pos_num << endl;
-    cout << "your poisons number : " << poi_num << endl;
-    cout << "your shields number : " << shi_num << endl;
-    cout << "your weapons number : " << wea_num << endl;
+    cout << "your potions number : " << pos_number << endl;
+    cout << "your poisons number : " << poi_number << endl;
+    cout << "your shields number : " << shie_number << endl;
+    cout << "your weapons number : " << wea_number << endl;
 }
 
 int inventory::get_size()
 {
     return inv_size;
 }
-int inventory::get_pos_num()
+int inventory::get_pos_number()
 {
-    return pos_num;
+    return pos_number;
 }
-int inventory::get_poi_num()
+int inventory::get_poi_number()
 {
-    return poi_num;
+    return poi_number;
 }
-int inventory::get_shi_num()
+int inventory::get_shie_number()
 {
-    return shi_num;
+    return shie_number;
 }
-int inventory::get_wea_num()
+int inventory::get_wea_number()
 {
-    return wea_num;
+    return wea_number;
 }
-void inventory::set_pos_num()
+void inventory::set_pos_number()
 {
-    pos_num--;
+    pos_number--;
 }
-void inventory::set_poi_num()
+void inventory::set_poi_number()
 {
-    poi_num--;
+    poi_number--;
 }
-void inventory::set_shi_num()
+void inventory::set_shie_number()
 {
-    shi_num--;
+    shie_number--;
 }
-void inventory::set_wea_num()
+void inventory::set_wea_number()
 {
-    wea_num--;
+    wea_number--;
 }
 

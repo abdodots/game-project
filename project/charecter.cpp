@@ -31,10 +31,10 @@ void charecter::take_damage(int x)
 		}
 		else if (defence + x < 0 )
 		{
-			int y = x;
-			y += defence;
+			int stp = x;
+			stp += defence;
 			defence = 0;
-			health += y;
+			health += stp;
 		}
 		else
 		{
